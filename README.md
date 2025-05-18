@@ -6,6 +6,21 @@ Each file corresponds to a post on [lonfarr.com](https://www.lonfarr.com), where
 
 I'd highly recommend looking at the post on the website since it has additional information beyond what is in the code. This repo mainly serves as a place for the code to live and others to find it.
 
+# Environment Setup
+Since a fair number of the puzzles are exploring the realm of typing in Python, here is my setup for testing the code. I am using [Pyright](https://github.com/microsoft/pyright) through the [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) module in [VSCode](https://code.visualstudio.com), but there are others such as [Mypy](https://mypy-lang.org) and [Pyre](https://pyre-check.org), which may yield different results. I personally find that the Pyright setup with VSCode is the easiest way to get started with type checking since it can all be installed easily in the IDE, so I opted for that configuration. To setup VSCode for strict type checking (which is my recommendation for any new code) you can add the following into the `settings.json` for VSCode:
+```
+    "python.analysis.typeCheckingMode": "strict",
+```
+
+I use black as my linter because it has no configuration, so it removes all of the minor lint debates (like spaces before and after equality operators). It is also easy to setup in VSCode. After installing the [black extension], I add the following to my `settings.json` file so that it uses the formatter automatically on save:
+```
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter",
+      "editor.formatOnSave": true
+    },
+    "black-formatter.showNotifications": "onWarning"
+```
+
 # Acknowledgements and Inspirations
 I'd like to call out several locations where I learned about these quirks. While I do try to recognize them in the individual posts, I want to have a full list here along side the code to direct people to these interesting resources.
 * [wtfpython GitHub](https://github.com/satwikkansal/wtfpython)
