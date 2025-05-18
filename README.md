@@ -29,3 +29,8 @@ I'd like to call out several locations where I learned about these quirks. While
   * mCoding has a variety of videos on C++, Python, and Math. The Python videos do go into some depth of the inner workings of Python and led to some of the ideas for my posts.
   
 # Table of Contents
+
+* Iterable Membership Check
+  * [Blog Post](https://www.lonfarr.com/posts/2025-05-18-iterable_membership_check/)
+  * [Code](https://github.com/lonfarr/puzzling_python/blob/main/iterable_membership_check)
+  * Published 2025-05-18
