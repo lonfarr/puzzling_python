@@ -1,6 +1,6 @@
 # Puzzling Python
 
-This repo contains a series of examples of strange Python behaviors. These are based on my rememberance of posts that I made while working at Meta that I thought would be fun to share.
+This repo contains a series of examples of strange Python behaviors. These are based on my remembrance of posts that I made while working at Meta that I thought would be fun to share.
 
 Each file corresponds to a post on [lonfarr.com](https://www.lonfarr.com), where the post is directly linked in each file and in the table of contents below.
 
