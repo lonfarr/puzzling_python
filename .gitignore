@@ -1,0 +1,2 @@
+# Ignore the vscode project files since that is a common IDE (and what I am using)
+.vscode/
