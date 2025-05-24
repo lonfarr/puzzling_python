@@ -1,2 +1,5 @@
 # Ignore the vscode project files since that is a common IDE (and what I am using)
 .vscode/
+
+# Ignore pycache directory in case you have run python in this folder
+__pycache__/

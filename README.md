@@ -2,7 +2,9 @@
 
 This repo contains a series of examples of strange Python behaviors. These are based on my remembrance of posts that I made while working at Meta that I thought would be fun to share.
 
-Each file corresponds to a post on [lonfarr.com](https://www.lonfarr.com), where the post is directly linked in each file and in the table of contents below.
+Each folder (except experiments) corresponds to a post on [lonfarr.com](https://www.lonfarr.com), where the post is directly linked in each file and in the table of contents below.
+
+The `experiments` folder contains some smaller files that are little tests. Feel free to browse and view the README, but these files will not be as well maintained.
 
 I'd highly recommend looking at the post on the website since it has additional information beyond what is in the code. This repo mainly serves as a place for the code to live and others to find it.
 
