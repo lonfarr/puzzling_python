@@ -5,6 +5,7 @@ that passing in an iterable like a dictionary or a set will cause a TypeError.
 
 from collections.abc import Iterable
 from dataclasses import dataclass
+import unittest
 
 
 @dataclass(frozen=True)
@@ -36,56 +37,41 @@ def store_record_in_db_if_new(
 ###########
 # Testing #
 ###########
-@dataclass
-class TestCase:
-    input_current_rows: list[FrozenDBRecord] | dict[FrozenDBRecord, str]
-    input_row: FrozenDBRecord
-    expected_result: bool
+class TestStoreRecordInDBIfNew(unittest.TestCase):
+    def test_empty_list_adds_record(self) -> None:
+        current_rows: list[FrozenDBRecord] = []
+        row: FrozenDBRecord = FrozenDBRecord("Arthur Dent", 35)
+        self.assertTrue(store_record_in_db_if_new(current_rows, row))
 
+    def test_list_without_match_adds_record(self) -> None:
+        current_rows: list[FrozenDBRecord] = [FrozenDBRecord("Ford Prefect", 200)]
+        row: FrozenDBRecord = FrozenDBRecord("Arthur Dent", 35)
+        self.assertTrue(store_record_in_db_if_new(current_rows, row))
 
-def main() -> None:
-    # Test cases to run with both lists and dictionaries
-    test_cases: list[TestCase] = [
-        # 1) Empty list should add record
-        TestCase([], FrozenDBRecord("Arthur Dent", 35), True),
-        # 2) List without match should add record
-        TestCase(
-            [FrozenDBRecord("Ford Prefect", 200)],
-            FrozenDBRecord("Arthur Dent", 35),
-            True,
-        ),
-        # 3) List with match should not add record
-        TestCase(
-            [FrozenDBRecord("Arthur Dent", 35)],
-            FrozenDBRecord("Arthur Dent", 35),
-            False,
-        ),
-        # 4) Empty dictionary should add record
-        TestCase({}, FrozenDBRecord("Arthur Dent", 35), True),
-        # 5) Dictionary without a match should add record
-        TestCase(
-            {FrozenDBRecord("Ford Prefect", 200): "Alien"},
-            FrozenDBRecord("Arthur Dent", 35),
-            True,
-        ),
-        # 6) Dictionary with a match should not add record
-        TestCase(
-            {FrozenDBRecord("Arthur Dent", 35): "Human"},
-            FrozenDBRecord("Arthur Dent", 35),
-            False,
-        ),
-    ]
+    def test_list_with_match_does_not_add_record(self) -> None:
+        current_rows: list[FrozenDBRecord] = [FrozenDBRecord("Arthur Dent", 35)]
+        row: FrozenDBRecord = FrozenDBRecord("Arthur Dent", 35)
+        self.assertFalse(store_record_in_db_if_new(current_rows, row))
 
-    # All of the test cases pass
-    for test_case in test_cases:
-        result: bool = store_record_in_db_if_new(
-            test_case.input_current_rows, test_case.input_row
-        )
-        if result != test_case.expected_result:
-            print(f"Test case ({test_case}) did not match expected result")
-        else:
-            print(f"Test case ({test_case}) passed!")
+    def test_empty_dict_adds_record(self):
+        current_rows: dict[FrozenDBRecord, str] = {
+            FrozenDBRecord("Ford Prefect", 200): "Alien"
+        }
+        row: FrozenDBRecord = FrozenDBRecord("Arthur Dent", 35)
+        self.assertTrue(store_record_in_db_if_new(current_rows, row))
+
+    def test_dict_without_match_adds_record(self) -> None:
+        current_rows: dict[FrozenDBRecord, str] = {}
+        row: FrozenDBRecord = FrozenDBRecord("Arthur Dent", 35)
+        self.assertTrue(store_record_in_db_if_new(current_rows, row))
+
+    def test_dict_with_match_does_not_add_record(self) -> None:
+        current_rows: dict[FrozenDBRecord, str] = {
+            FrozenDBRecord("Arthur Dent", 35): "Human"
+        }
+        row: FrozenDBRecord = FrozenDBRecord("Arthur Dent", 35)
+        self.assertFalse(store_record_in_db_if_new(current_rows, row))
 
 
 if __name__ == "__main__":
-    main()
+    unittest.main()
