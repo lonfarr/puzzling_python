@@ -1,6 +1,8 @@
 """
-This is the code for the original function which contains an error
-that passing in an iterable like a dictionary or a set will cause a TypeError.
+This is the code which now uses a frozen dataclass to prevent TypeErrors.
+
+Since this also is enforced at runtime, this is a stronger safety protection
+but does prevent modifying the dataclass after creation.
 """
 
 from collections.abc import Iterable
