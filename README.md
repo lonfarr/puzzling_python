@@ -37,7 +37,11 @@ I'd like to call out several locations where I learned about these quirks. While
   * [Code](https://github.com/lonfarr/puzzling_python/blob/main/iterable_membership_check)
   * Published 2025-05-18
   * Updated 2025-05-23
-* Iterable Membership Check
+* Iterators as Function Inputs
   * [Blog Post](https://www.lonfarr.com/posts/2025-05-26-iterators_as_function_inputs/)
   * [Code](https://github.com/lonfarr/puzzling_python/blob/main/iterators_as_function_inputs)
   * Published 2025-05-25
+* How do you make a tuple?
+  * [Blog Post](https://www.lonfarr.com/posts/2025-06-03-how_do_you_make_a_tuple/)
+  * [Code](https://github.com/lonfarr/puzzling_python/blob/main/how_do_you_make_a_tuple)
+  * Published 2025-06-03
