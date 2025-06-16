@@ -28,7 +28,7 @@ I use black as my linter because it has no configuration, so it removes all of t
 
 # Acknowledgements and Inspirations
 
-I'd like to call out several locations where I learned about these quirks. While I do try to recognize them in the individual posts, I want to have a full list here along side the code to direct people to these interesting resources.
+I'd like to call out several locations where I learned about these quirks or other useful tools.
 
 - [wtfpython GitHub](https://github.com/satwikkansal/wtfpython)
   - A great GitHub (much greater than this one) with many examples. The readme is heavily detailed and you don't really even need to look at the code in the repo. A lot of my more detailed puzzles/examples were inspired by these relatively simple examples.
@@ -52,3 +52,7 @@ I'd like to call out several locations where I learned about these quirks. While
   - [Blog Post](https://www.lonfarr.com/posts/2025-06-03-how_do_you_make_a_tuple/)
   - [Code](https://github.com/lonfarr/puzzling_python/blob/main/how_do_you_make_a_tuple)
   - Published 2025-06-03
+- When Assert Does Not Raise
+  - [Blog Post](https://www.lonfarr.com/posts/2025-06-16-when_assert_does_not_raise/)
+  - [Code](https://github.com/lonfarr/puzzling_python/blob/main/when_assert_does_not_raise/)
+  - Published 2025-06-16
