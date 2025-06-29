@@ -56,3 +56,7 @@ I'd like to call out several locations where I learned about these quirks or oth
   - [Blog Post](https://www.lonfarr.com/posts/2025-06-16-when_assert_does_not_raise/)
   - [Code](https://github.com/lonfarr/puzzling_python/blob/main/when_assert_does_not_raise/)
   - Published 2025-06-16
+- Checking Against Infinity and NaN (not a number)
+  - [Blog Post](https://www.lonfarr.com/posts/2025-06-29-checking_against_inf_and_nan/)
+  - [Code](https://github.com/lonfarr/puzzling_python/blob/main/checking_against_inf_and_nan/)
+  - Published 2025-06-29
