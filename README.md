@@ -60,3 +60,7 @@ I'd like to call out several locations where I learned about these quirks or oth
   - [Blog Post](https://www.lonfarr.com/posts/2025-06-29-checking_against_inf_and_nan/)
   - [Code](https://github.com/lonfarr/puzzling_python/blob/main/checking_against_inf_and_nan/)
   - Published 2025-06-29
+- Order of Operations and Chaining
+  - [Blog Post](https://www.lonfarr.com/posts/2025-07-23-order_of_operations_and_chaining)
+  - [Code](https://github.com/lonfarr/puzzling_python/blob/main/order_of_operations_and_chaining)
+  - Published 2025-07-23
